@@ -34,3 +34,5 @@ bank = input("Choose Bank A or Bank B")
 # Decide how many hours of rest
 
 "_____________________________________________________________________________________________________________________"
+if (work_or_study == "study"):
+  study = input("Do you want to do a part-time job to study?")
