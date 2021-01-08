@@ -41,12 +41,14 @@ full_time = False
 part_time_with_study = False
 study = False
 
-if (work_or_ work_and_study_or_study == "work"):
+if (work_or_work_and_study_or_study == "work""work and study""work":
   num_hours = int(input("How many hours do you want to work? "))
   # decides whether desired number of hours is part-time or full-time
   if (num_hours >= 40):
     full_time = True
-  if (full_time == False):
+  if (num_hours <= 20):
+    part_time = True
+  else (work == False):
       
 if (work_and_study == "study"):
   study = input("Do you want to do a part-time job with study?")
