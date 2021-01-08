@@ -48,14 +48,15 @@ if (work_or_work_and_study_or_study == "work""work and study""work":
     full_time = True
   if (num_hours <= 20):
     part_time = True
-  else (work == False):
+  else: 
+    (work == False)
       
 if (work_and_study == "study"):
   study = input("Do you want to do a part-time job with study?")
       a = input("Do you want to do a part-time job with study?(Y/N) ")
     if (a == "Y"):
       part_time_with_study = True
-   if (work_and_study == False):
+   #if (work_and_study == False):
     
 # start choosing where to save the money in a bank (have at least two banks)
 bank = input("Choose Bank A or Bank B")
