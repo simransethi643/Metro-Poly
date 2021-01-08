@@ -49,7 +49,7 @@ if (work_or_work_and_study_or_study == "work""work and study""work":
   if (num_hours <= 20):
     part_time = True
   else: 
-    (work == False)
+    work == False
       
 if (work_and_study == "study"):
   study = input("Do you want to do a part-time job with study?")
