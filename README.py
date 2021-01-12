@@ -20,7 +20,7 @@ if (decision == "Y"):
   print("You spent $"+str(spending)+ " this month")
   balance -= spending
   print("Current balance: $" + str(balance))
-
+#Guess a number from 1-6. We'll roll the dice and if it matches with the player's guess, they get money
 
 # start choosing where to save the money in a bank (have at least two banks)
 #bank = input("Choose Bank A or Bank B")
