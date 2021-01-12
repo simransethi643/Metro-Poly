@@ -1,62 +1,35 @@
+import random
 # Metro-Poly
 
 # first level/introduction: The player will start game with
 
 # choosing between working or studying
-work_or_study = input("Choose to work or study:")
+balance = 2000
+print("Your current balance is $2000. You will play this game and earn or loose money as you move forward. If you end up with $0, you'll be kicked out! :)")
+decision = input("Do you want to work?Y/N ")
 
-full_time = False
-part_time_with_study = False
-study = False
-
-if (work_or_study == "work"):
-  num_hours = int(input("How many hours do you want to work?"))
-  # decides whether desired number of hours is part-time or full-time
-  if (num_hours >= 40):
-    full_time = True
-  if (full_time == False):
-    a = input("Do you want to study while working?(Y/N)")
-    if (a == "Y"):
-      part_time_with_study = True
-      
-if (work_or_study == "study"):
-  study = input("Do you want to do a part-time job to study?")
-  
+if (decision == "Y"):
+  num_hours = int(input("How many hours do you want to work per week?"))
+  wage = int(input("What is your hourly wage?"))
+  #Calculate salary
+  salary = num_hours * wage * 4
+  print("Your monthly salary is $" +str(salary))
+  balance += salary
+  print("Your current balance is: $" + str(balance))
+  spending = random.randint (1,balance)
+  print("You spent $"+str(spending)+ " this month")
+  balance -= spending
+  print("Current balance: $" + str(balance))
 
 
 # start choosing where to save the money in a bank (have at least two banks)
-bank = input("Choose Bank A or Bank B")
+#bank = input("Choose Bank A or Bank B")
 
 
 # Decide how many hours to spend for college and how many hours of study
 # Decide how many hours of work
 # Decide how many hours of free time
-# Decide how many hours of rest
-
-"_____________________________________________________________________________________________________________________"
+# Decide how many hours of rest"
 # choosing between working or studying
-work_or_study = input("Choose to work or study(feel free to out both options):")
-
-full_time = False
-part_time_with_study = False
-study = False
-
-if (work_or_study == "work and study" or work_or_study=="study" ):
-  num_hours = int(input("How many hours do you want to work?"))
-  # decides whether desired number of hours is part-time or full-time
-  if (num_hours >= 40):
-    full_time = True
-  if (num_hours <= 20):
-    part_time = True
-  else: 
-    work == False
-      
-if (work_and_study == "study"):
-  study = input("Do you want to do a part-time job with study?")
-      a = input("Do you want to do a part-time job with study?(Y/N)")
-    if (a == "Y"):
-      part_time_with_study = True
-   #if (work_and_study == False):
     
 # start choosing where to save the money in a bank (have at least two banks)
-bank = input("Choose Bank A or Bank B")
