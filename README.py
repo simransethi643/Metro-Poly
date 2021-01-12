@@ -35,13 +35,13 @@ bank = input("Choose Bank A or Bank B")
 
 "_____________________________________________________________________________________________________________________"
 # choosing between working or studying
-work_or_study = input("Choose to work or study:")
+work_or_study = input("Choose to work or study(feel free to out both options):")
 
 full_time = False
 part_time_with_study = False
 study = False
 
-if (work_or_study == "work" or work_or_study== "study"):
+if (work_or_study == "work and study" or work_or_study=="study" ):
   num_hours = int(input("How many hours do you want to work?"))
   # decides whether desired number of hours is part-time or full-time
   if (num_hours >= 40):
