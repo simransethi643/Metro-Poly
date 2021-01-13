@@ -1,4 +1,5 @@
 import random
+import sys
 # Metro-Poly
 
 # first level/introduction: The player will start game with
@@ -17,13 +18,32 @@ if (decision == "Y"):
   balance += salary
   print("Your current balance is: $" + str(balance))
   spending = random.randint (1,balance)
-  print("You spent $"+str(spending)+ " this month")
+  print("You spent $"+str(spending)+ " this month.")
   balance -= spending
   print("Current balance: $" + str(balance))
-#Guess a number from 1-12. We'll roll the dice and if it matches with the player's guess, they get money
+  print("Now we are going to play a game where you will guess a random number from 1 to 12. \nAfter that we will roll the dice and if your guess matches with the dice you will receive a random amount of money from $100-$600. \nAnd if your guess doesn't match you loose $200 hahahah! You will have 3 chances to make fortune or loose!")
+  balance =0
+  if balance <=0:
+    print("Ding ding ding! You are about to be homeless!")
+    sys.exit(0)
+  i=0
+  while i<3:
+    guess = int(input("Choose a number between 1 to 12:"))
+    dice = random.randint(1,12)
+    if guess == dice:
+      money_earned = random.randint(100,600)
+      print("Congrats!! You earned $" +str(money_earned))
+      balance +=money_earned
+    else:
+      print("Jokes on you!! You just lost $200")
+      balance -=200
+    i+=1
+    print("Current balance: $" + str(balance))
+    if balance <=0:
+      print("Ding ding ding! You are about to be homeless! But you have one more chance to get back up!")
+      sys.exit(0)
+  
 
-# start choosing where to save the money in a bank (have at least two banks)
-#bank = input("Choose Bank A or Bank B")
 
 
 # Decide how many hours to spend for college and how many hours of study
