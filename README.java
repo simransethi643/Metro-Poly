@@ -1,5 +1,7 @@
 import java.util.Scanner;
-import java.util.Random; import java.util.*;
+import java.util.Random;
+import java.util.*;
+
 public class MetroPoly {
     public static int puzzle(int balance){
         System.out.println("Oh no, you have 0/negative balance.\nNow, we will give you a chance to win money!");
