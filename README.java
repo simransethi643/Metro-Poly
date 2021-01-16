@@ -2,23 +2,33 @@ import java.util.Scanner;
 import java.util.Random; import java.util.*;
 public class MetroPoly {
     public static int puzzle(int balance){
-        System.out.println("Ding ding ding! You are about to be homeless!\nNow, we will give you a chance to win money.");
+        System.out.println("Oh no, you have 0/negative balance.\nNow, we will give you a chance to win money!");
         Map<String, String> dictionaryName = new HashMap<String, String>();
-        dictionaryName.put("Who is always getting bothered by boys?",  "Luna");
-        dictionaryName.put("Who has done 7 hackathons?",  "Simran");
+        dictionaryName.put("Who can travel the world by staying on a corner?",  "Stamp");
+        dictionaryName.put("What has to be broken before you use it?",  "Egg");
         dictionaryName.put("What goes up, and never goes down?",  "Age");
-        dictionaryName.put("Who has great sarcasm?", "Samira");
-        dictionaryName.put("Who is one of the people who goes to GMU here?", "Meghana");
+        dictionaryName.put("What has many keys but can't open a lock?", "Piano");
+        dictionaryName.put("What tastes better than it smells?", "Tongue");
+        dictionaryName.put("I am an odd number. Take away a letter and I become even. What number am I?", "Seven");
+        dictionaryName.put("Which month has 28 days?", "All of them");
+        dictionaryName.put("Which eleven letters word is always spelled incorrectly?", "Incorrectly");
+        dictionaryName.put("What kind of tree can you carry in your hands?", "Palm");
+        dictionaryName.put("What is something you will never see again?", "Yesterday");
         
-        String[] questions = new String[5];
-        questions[0] = "Who is always getting bothered by boys?";
-        questions[1]= "Who has done 7 hackathons?";
+        String[] questions = new String[10];
+        questions[0] = "Who can travel the world by staying on a corner?";
+        questions[1]= "What has to be broken before you use it?";
         questions[2]= "What goes up, and never goes down?";
-        questions[3]= "Who has great sarcasm?";
-        questions[4] = "Who is one of the people who goes to GMU here?";
+        questions[3]= "What has many keys but can't open a lock?";
+        questions[4] = "What tastes better than it smells?";
+        questions[5]= "I am an odd number. Take away a letter and I become even. What number am I?";
+        questions[6]= "Which month has 28 days?";
+        questions[7]= "Which eleven letters word is always spelled incorrectly?";
+        questions[8]= "What kind of tree can you carry in your hands?";
+        questions[9]= "What is something you will never see again?";
         
         Random random = new Random();
-        int randomInt = random.nextInt(5);
+        int randomInt = random.nextInt(10);
         String value = dictionaryName.get(questions[randomInt]);
         System.out.print(questions[randomInt] + " ");
         Scanner myObj = new Scanner(System.in);
@@ -26,11 +36,11 @@ public class MetroPoly {
         if (answer.toUpperCase().equals(value.toUpperCase())){
             System.out.println("Good job on getting the answer correct!");
             balance += random.nextInt(501) + 100;
-            System.out.println("Current balance: $" + balance);
-            return balance;
         }
+        
+        System.out.println("Current balance: $" + balance);
     
-        else {
+        if (balance <= 0) {
             System.out.println("Your luck ran out today!");
             System.out.println("Your balance is still 0 or negative, so you lost the game!");
             System.exit(0);
@@ -65,7 +75,7 @@ public class MetroPoly {
         Random random = new Random();
         Scanner myObj = new Scanner(System.in);
         int balance = 2000;
-        System.out.println("Your current balance is $2000. You will play this game and earn or lose money as you move forward. If you end up with $0, you'll be kicked out! :)");
+        System.out.println("Your current balance is $2000. You will play this game and earn or loose money as you move forward. If you end up with $0, you'll be kicked out! :)");
         System.out.println("In this game, you are a college graduate, who will start working.");
         System.out.println ("How many hours do you want to work per week?");
         int num_hours = myObj.nextInt();
